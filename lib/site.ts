@@ -28,7 +28,7 @@ export const about = {
   statement:
     "I combine technical knowledge, product thinking, and operational leadership to turn ideas into functional, scalable systems.",
   body: [
-    "My background sits where Information Technology, business operations, entrepreneurship, and technology implementation meet. That mix is the point: I can understand the business problem, architect the system behind it, build or coordinate the product, and make it hold up in day-to-day operations.",
+    "My background sits where business operations, entrepreneurship, and technology implementation meet. That mix is the point: I can understand the business problem, architect the system behind it, build or coordinate the product, and make it hold up in day-to-day operations.",
     "I am not only a developer and not only a project manager. I work across the whole line — from the requirement on a whiteboard to the deployed system a team actually runs on.",
   ],
   areas: [
