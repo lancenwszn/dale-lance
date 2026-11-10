@@ -13,7 +13,7 @@ const ease = [0.2, 0.7, 0.2, 1] as const;
  * every other role is a compact row that expands inline.
  * Roles flagged `earlier` are grouped under an "Earlier career" heading.
  */
-export function ExperienceTimeline({ roles }: { roles: Role[] }) {
+export function ExperienceTimeline({ roles, certification }: { roles: Role[]; certification?: string }) {
   const [open, setOpen] = useState<Set<number>>(() => new Set([0]));
   const toggle = (i: number) =>
     setOpen((prev) => {
@@ -38,7 +38,7 @@ export function ExperienceTimeline({ roles }: { roles: Role[] }) {
           {i === firstEarlier && (
             <Reveal>
               <div className="grid gap-x-10 pb-2 pl-8 pt-14 lg:grid-cols-12 lg:pl-0">
-                <p className="label hidden text-paper/60 lg:col-span-3 lg:block">Compact view</p>
+                <span className="hidden lg:col-span-3 lg:block" />
                 <p className="display text-3xl text-paper/90 md:text-5xl lg:col-span-9">Earlier career</p>
               </div>
             </Reveal>
@@ -55,6 +55,25 @@ export function ExperienceTimeline({ roles }: { roles: Role[] }) {
           </Reveal>
         </li>
       ))}
+
+      {certification && (
+        <li>
+          <Reveal>
+            <article className="group relative grid gap-x-10 gap-y-3 py-6 pl-8 lg:grid-cols-12 lg:pl-0">
+              <span
+                aria-hidden
+                className="absolute left-0 top-[1.95rem] h-[11px] w-[11px] border border-paper/60 bg-burgundy transition-colors duration-300 group-hover:border-orange-hi group-hover:bg-orange-hi lg:left-[calc(25%-1.25rem-5px)]"
+              />
+              <div className="lg:col-span-3 lg:pr-12">
+                <p className="label pt-1 text-paper/70 lg:pt-2">Certification</p>
+              </div>
+              <div className="border-t border-paper/15 pt-5 lg:col-span-9 lg:-mt-5">
+                <h3 className="text-xl font-medium leading-tight tracking-[-0.03em] md:text-2xl">{certification}</h3>
+              </div>
+            </article>
+          </Reveal>
+        </li>
+      )}
     </ol>
   );
 }
@@ -105,7 +124,9 @@ function Entry({
       {/* date column */}
       <div className="lg:col-span-3 lg:pr-12">
         {featured && <p className="display mb-3 text-6xl text-orange-hi">{String(index + 1).padStart(2, "0")}</p>}
-        <p className={`label ${featured ? "text-paper" : "pt-1 text-paper/70 lg:pt-2"}`}>{role.period}</p>
+        {role.period && (
+          <p className={`label ${featured ? "text-paper" : "pt-1 text-paper/70 lg:pt-2"}`}>{role.period}</p>
+        )}
         {featured && (
           <p className="label mt-3 inline-flex items-center gap-2 text-orange-hi">
             <span className="inline-block h-1.5 w-1.5 bg-orange-hi" /> Latest role

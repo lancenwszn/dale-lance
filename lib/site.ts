@@ -54,7 +54,7 @@ export type Role = {
   title: string;
   /** Industry descriptor — employer names are deliberately not published */
   org: string;
-  /** Exactly as supplied — never adjusted */
+  /** Exactly as supplied — never adjusted. Empty = no dates shown. */
   period: string;
   /** Short description, always visible */
   summary: string;
@@ -154,7 +154,7 @@ export const experience: Role[] = [
   {
     title: "Progressive Leadership Roles",
     org: "BPO – Customer Service, Technical Support & Sales",
-    period: "2004 – 2017",
+    period: "",
     summary:
       "Built a career across customer service, technical support, and sales, progressing through leadership responsibilities. Developed experience in team management, service delivery, performance management, quality assurance, and operational execution.",
     responsibilities: [

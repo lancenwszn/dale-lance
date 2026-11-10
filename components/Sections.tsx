@@ -101,31 +101,7 @@ export function Experience() {
         </h2>
 
         <div className="mt-14 md:mt-20">
-          <ExperienceTimeline roles={experience} />
-
-          {/* foundation */}
-          <Reveal>
-            <div className="mt-10 grid gap-x-10 gap-y-6 border-y border-paper/25 py-10 lg:grid-cols-12">
-              <p className="label text-paper/70 lg:col-span-3">Foundation</p>
-              <div className="grid gap-8 sm:grid-cols-2 lg:col-span-9">
-                <div>
-                  <p className="label text-orange-hi">Education</p>
-                  <p className="mt-2 text-xl font-semibold leading-snug tracking-[-0.02em]">
-                    {about.education.degree}
-                  </p>
-                  <p className="text-paper/65">
-                    {about.education.school}, {about.education.place}
-                  </p>
-                </div>
-                <div>
-                  <p className="label text-orange-hi">Certification</p>
-                  <p className="mt-2 text-xl font-semibold leading-snug tracking-[-0.02em]">
-                    {about.certification}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Reveal>
+          <ExperienceTimeline roles={experience} certification={about.certification} />
         </div>
       </div>
     </section>
