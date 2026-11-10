@@ -14,6 +14,11 @@ const muted = "text-ink/35";
 
 export function About() {
   const facts = [
+    {
+      label: "Environment",
+      big: "Startups",
+      text: "Recent roles across real estate, e-commerce, and crypto startups — plus a business I founded and ran.",
+    },
     { label: "Certification", big: "LSS", text: `${about.certification}.` },
     {
       label: "Disciplines",
@@ -32,7 +37,7 @@ export function About() {
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid gap-4 md:mt-20 md:grid-cols-2">
+        <div className="mt-14 grid gap-4 md:mt-20 md:grid-cols-3">
           {facts.map((f, i) => (
             <Reveal key={f.label} delay={i * 0.08} className="flex min-h-[15rem] flex-col bg-white p-6">
               <p className="flex items-center gap-2 text-[0.75rem] font-semibold uppercase">

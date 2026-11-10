@@ -28,7 +28,7 @@ export const about = {
   statement:
     "I combine technical knowledge, product thinking, and operational leadership to turn ideas into functional, scalable systems.",
   body: [
-    "My background sits where business operations, entrepreneurship, and technology implementation meet. That mix is the point: I can understand the business problem, architect the system behind it, build or coordinate the product, and make it hold up in day-to-day operations.",
+    "My background sits where business operations, entrepreneurship, and technology implementation meet — most of it inside startups, where one person has to cover all three. That mix is the point: I can understand the business problem, architect the system behind it, build or coordinate the product, and make it hold up in day-to-day operations.",
     "I am not only a developer and not only a project manager. I work across the whole line — from the requirement on a whiteboard to the deployed system a team actually runs on.",
   ],
   areas: [
@@ -107,12 +107,12 @@ export const experience: Role[] = [
   },
   {
     title: "Project & Operations Manager",
-    org: "US E-Commerce & Dropshipping",
+    org: "US E-Commerce & Dropshipping Startup",
     period: "February 2025 – September 2025",
     summary:
-      "Managed project execution and day-to-day business operations for an e-commerce operation. Coordinated workflows, team activities, operational priorities, and process improvements to support business execution.",
+      "Managed project execution and day-to-day business operations for an e-commerce startup. Coordinated workflows, team activities, operational priorities, and process improvements to support business execution.",
     responsibilities: [
-      "Managed project execution and day-to-day business operations for an e-commerce operation.",
+      "Managed project execution and day-to-day business operations for an e-commerce startup.",
       "Coordinated workflows, team activities, and operational priorities.",
       "Drove process improvements to support business execution.",
     ],
