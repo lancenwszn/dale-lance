@@ -42,11 +42,6 @@ export const about = {
     "Building and managing teams",
     "Turning business requirements into practical technology",
   ],
-  education: {
-    degree: "Bachelor of Science in Information Technology",
-    school: "Saint Louis University",
-    place: "Baguio City, Philippines",
-  },
   certification: "Lean Six Sigma Yellow Belt",
 };
 
